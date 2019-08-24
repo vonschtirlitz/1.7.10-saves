@@ -1,4 +1,4 @@
-#Fri Aug 23 23:59:19 PDT 2019
-C9s_Sneaky=4
+#Sat Aug 24 00:44:03 PDT 2019
+C9s_Sneaky=8
 AlexanderScott=3
-von_schtirlitz=17
+von_schtirlitz=18
