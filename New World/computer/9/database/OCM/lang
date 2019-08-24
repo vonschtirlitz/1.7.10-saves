@@ -1,0 +1,192 @@
+function adv(language, n, arg)
+  if arg == nil then
+    arg = 1
+  end
+  local texts = {
+    ["en"] = {
+      "Please put nothing except torches into Slot "..arg.."!",
+      "The Vanilla minecraft enderchest doesn't work! Check out the mod: EnderStorage",
+      "Please put nothing except an Enderchest into Slot "..arg.."!",
+      "Please put an Enderchest into Slot "..arg.."!",
+      "Please place nothing except a chest into Slot "..arg.."!",
+      "Please put a chest into Slot "..arg.."!",
+      "Please put torches into one of the Torch-slots!",
+      "Please put fuel (e.g. coal) into any undefined Slot(_)!"
+    },
+    ["de"] = {
+      "Bitte nichts anderes als Fackeln in Slot "..arg.." packen!",
+      "Die Vanilla minecraft Enderkiste funktioniert nicht! Probier's mal mit der Mod 'EnderStorage'",
+      "Bitte nichts anderes als eine Enderkiste in Slot "..arg.." packen!",
+      "Bitte eine Enderkiste in Slot "..arg.." packen!",
+      "Bitte nichts anderes als eine Kiste in Slot "..arg.." packen!",
+      "Bitte eine Kiste in Slot "..arg.." packen!",
+      "Bitte Fackeln in einen der Fackelslots packen!",
+      "Bitte Treibstoff (z.B. Kohle) in irgendeinen undefinierten Slot(_) packen!"
+    }
+  }
+  return texts[language][n]
+end
+
+function status(language, n, arg1, arg2)
+  if arg1 == nil then
+    arg1 = 1
+  end
+  if arg2 == nil then
+    arg2 = 1
+  end
+  local texts = {
+    ["en"] = {
+      "Found 1 ore!",
+      "Found " ..arg1.. " ores!",
+      "Dropoff chest is full. Sleeping.",
+      "Inventory cleared succesfully!",
+      "Refueled successfully",
+      "Not enough Fuel left!",
+      "Insert Fuel into one of these Slots to continue: ",
+      "Digged and searched through "..arg1.." out of "..arg2.." cross tunnels...",
+      "Successfully digged and searched through all cross tunnels!"
+    },
+    ["de"] = {
+      "1 Erz gefunden!",
+      arg1.." Erze gefunden!",
+      "Zustellungskiste ist voll. Schlafe.",
+      "Inventar erfolgreich ausgeleert!",
+      "Erfolgreich nachgetankt",
+      "Nicht genug Treibstoff uebrig!",
+      "Packe Treibstoff in einen dieser Slots um weiter zu machen: ",
+      arg1.." von "..arg2.." Quertunnel gegraben und durchsucht...",
+      "Erfolgreich alle Quertunnel gegraben und durchsucht!"
+    },
+    ["es"] = {
+      "!Encontrado 1 mineral!",
+      "!Encontrado "..arg1.." mineral!"
+    }
+  }
+  return texts[language][n]
+end
+
+function layout(language, n, arg)
+  if arg == nil then
+    arg = 1
+  end
+  local texts = {
+    ["en"] = {
+      "I = Ignor",
+      "T = Torch",
+      "C = Chest",
+      "A = Autofuel",
+      "!!!NEW UPDATE!!!",
+      "Don't show again",
+      "Patchnotes",
+      "Ok",
+      "Start",
+      "Options",
+      "Quit",
+      "Fuellevel:",
+      "WARNING!",
+      "Torches:",
+      "Enderchest:",
+      "false",
+      "true",
+      "Chest:",
+      "Autofuel:",
+      "Go!",
+      "Home",
+      "Space between tunnels:",
+      "Number of cross tunnels: ",
+      "Length of adjacent tunnels: ",
+      "enderchest",
+      "chest",
+      "none",
+      "Automatic anti-spawn-torches:",
+      "On",
+      "Off",
+      "Torches on the main floor:",
+      "Torches per crosstunnel: ",
+      "Place floor:",
+      "Language:",
+      "Save as default",
+      "Ignor-list:",
+      "All items on the list will be ignored when "..arg.." searches for ores. To edit the list, empty the inventory of "..arg.." and put in the blocks you wish. After that, press space to add or delete to remove the blocks to/from the list. Press enter to confirm.",
+      "Number of Ignor-Slots:",
+      "Throw away junk:",
+      "Place walls:"
+    },
+    ["de"] = {
+      "I = Ignorieren",
+      "T = Fackeln",
+      "C = Kiste",
+      "A = Automatisch tanken",
+      "!!!NEUES UPDATE!!!",
+      "Nicht mehr anzeigen",
+      "Patchnotizen",
+      "Ok",
+      "Start",
+      "Optionen",
+      "Beenden",
+      "Tankfuellung:",
+      "WARNUNG!",
+      "Fackeln:",
+      "Enderkiste",
+      "falsch",
+      "wahr",
+      "Kiste:",
+      "Automatisches Tanken:",
+      "Los!",
+      "Home",
+      "Platz zwischen Tunneln:",
+      "Anzahl an Quertunneln: ",
+      "Laenge der Quertunnel:",
+      "Enderkiste",
+      "Kiste",
+      "Keine",
+      "Fackeln mobsicher setzen:",
+      "Ein",
+      "Aus",
+      "Fackeln im Hauptgang:",
+      "Fackeln pro Quertunnel: ",
+      "Boden platzieren:",
+      "Sprache:",
+      "Als Standart speichern",
+      "Ignorier-Liste:",
+      "Alle in der Liste enthaltenen Bloecke werden beim Suchen nach Erzen von "..arg.." ignoriert. Um sie zu bearbeiten, entleere das Inventar von "..arg.." und lege die gewuenschten Bloecke hinein. Druecke dann die Leertaste zum hinzufuegen oder die Loeschtaste zum loeschen. Enter zum bestaetigen.",
+      "Anzahl an Ignorier-Slots:",
+      "Muell wegwerfen:",
+      "Waende platzieren:"
+    }
+  }
+  return texts[language][n]
+end
+
+function popup(language, n, arg)
+  if arg == nil then
+    arg = 1
+  end
+  local texts = {
+    ["en"] = {
+      "Wrong item in Slot: "..arg,
+      "Vanilla minecraft enderchest doesn't work",
+      "No Enderchest found",
+      "No chest found",
+      "Not enough torches",
+      "Not enough fuel",
+      "Following errors prohibited "..arg.." from continuing:",
+      "Go anyways",
+      "Back",
+      "Quit"
+    },
+    ["de"] = {
+      "Falsches item in Slot: "..arg,
+      "Vanilla minecraft Enderkiste funktioniert nicht",
+      "Keine Enderkiste gefunden",
+      "Keine Kiste gefunden",
+      "Nicht genug Fackeln",
+      "Nicht genug Brennstoff",
+      "Folgende Fehler hinderten "..arg.." am fortfahren:",
+      "Egal, Los",
+      "Zurueck",
+      "Beenden"
+    }
+  }
+  return texts[language][n]
+end

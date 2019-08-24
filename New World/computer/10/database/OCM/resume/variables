@@ -1,0 +1,61 @@
+searching = false
+maxSpace = false
+CrosswayAmount = 2
+orientation = {
+  "East",
+  "North",
+  "West",
+  "South",
+}
+slots = {
+  "_",
+  "_",
+  "_",
+  "_",
+  "_",
+  "_",
+  "_",
+  "_",
+  "_",
+  "_",
+  "_",
+  "_",
+  "_",
+  "_",
+  "_",
+  "T",
+}
+level = 0
+index = 2
+FuelDemand = 620
+startDay = 73
+TorchDemand = 21
+startTime = 8.988
+torchPositions = {
+  6,
+}
+stats = {
+  ores = 92,
+  time = 0,
+  dug = 202,
+  moves = 315,
+}
+direction = 2
+setup = false
+cache = {
+  4,
+  1,
+  1,
+  2,
+  2,
+  5,
+  2,
+  1,
+  2,
+  6,
+  3,
+  6,
+  3,
+  2,
+  4,
+}
