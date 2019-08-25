@@ -20,7 +20,7 @@ slots = {
   "_",
   "T",
 }
-level = 16
+level = 15
 index = 2
 FuelDemand = 372
 startDay = 91
@@ -30,10 +30,10 @@ torchPositions = {
   6,
 }
 stats = {
-  ores = 668,
+  ores = 754,
   time = 0,
-  dug = 713,
-  moves = 871,
+  dug = 799,
+  moves = 1063,
 }
 direction = 2
 setup = false
@@ -486,26 +486,6 @@ cache = {
   1,
   2,
   2,
-  1,
-  1,
-  1,
-  1,
-  1,
-  4,
-  1,
-  4,
-  1,
-  2,
-  1,
-  5,
-  1,
-  1,
-  1,
-  1,
-  1,
-  1,
-  2,
-  1,
   1,
   1,
   1,
