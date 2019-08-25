@@ -1,0 +1,26 @@
+function save(path, content)
+	local file = fs.open(path, "w")
+	file.writeLine(content)
+	file.close()
+end
+
+function Splitter(inputstr, sep)
+	if sep == nil then
+    sep = "%s"
+  end
+  local t, i = {}, 1
+  for str in string.gmatch(inputstr, "([^"..sep.."]+)") do
+    t[i] = str
+    i = i + 1
+  end
+  return t
+end
+
+local programName = Splitter(shell.getRunningProgram(), "/")[2]
+
+shell.run("delete "..programName)
+print("updating...")
+shell.run("pastebin get gkz5sgZ8 "..programName)
+term.clear()
+save("database/"..programName.."/state", "1")
+shell.run(programName)
