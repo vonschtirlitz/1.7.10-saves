@@ -1,6 +1,6 @@
-#Thu Oct 10 10:14:50 PDT 2019
-C9s_Sneaky=31
+#Thu Oct 10 12:53:22 PDT 2019
+C9s_Sneaky=34
 AlexanderScott=4
-von_schtirlitz=71
-Shaydewalker=2
+von_schtirlitz=81
+Shaydewalker=6
 ChrisHenk=4

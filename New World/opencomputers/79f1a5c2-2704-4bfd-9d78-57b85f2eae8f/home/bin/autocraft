@@ -10,6 +10,8 @@ local gpu = component.gpu
 -- Each element of the array is "item", "damage", "number wanted", "max craft size"
 -- Damage value should be zero for base items
 
+
+--io.write(meController "\n")
 items = {
     {265,       0, 16384, 256 },
 }
@@ -31,7 +33,7 @@ while true do
         curCrafting = items[curIdx][5]
         curCraftStatus = items[curIdx][6]
 
-        -- io.write("Checking for " .. curMinValue .. " of " .. curName .. "\n")
+        io.write("Checking for " .. curMinValue .. " of " .. curName .. "\n")
         storedItem = meController.getItemsInNetwork({
             name = curName,
             damage = curDamage

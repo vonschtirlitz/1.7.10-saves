@@ -1,0 +1,48 @@
+local component = require "component"
+local event = require "event"
+local term = require "term"
+local gpu = component.gpu
+
+local key_space = require("keyboard").keys.space
+local running = true
+local x, y, width, height
+local outputWidth = 8 -- 00:00:00 == 8 chars
+
+local events = setmetatable({}, {__index = function() return function() end end})
+function events.key_up(keyboard, char, code, player)
+  if (code == key_space) then
+    running = false
+  end  
+end
+
+function events.screen_resized(screenAddress, newWidth, newHeight)
+  width, height = newWidth, newHeight
+  x = math.max(1, math.floor((width - outputWidth) / 2)) 
+  y = math.max(1, math.floor(height / 2))
+
+  term.clear()
+end
+
+function clockTimer()
+  gpu.set(x, y, os.date("%H:%M:%S", os.time()))
+end
+
+function handleEvent(event, ...)
+  if (event) then
+    events[event](...)
+  end  
+end
+
+local prevWidth, prevHeight = gpu.getResolution()
+if (not gpu.setResolution(outputWidth, 1)) then
+  events.screen_resized(false, prevWidth, prevHeight)
+end
+
+local timerEvent = event.timer(1/20, clockTimer, math.huge)
+
+while running do
+  handleEvent(event.pull())
+end
+
+event.cancel(timerEvent)
+gpu.setResolution(prevWidth, prevHeight)
